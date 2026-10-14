@@ -46,6 +46,7 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-rose-500 selection:text-white">
 
+    <!-- Header / Hero Section -->
     <header class="hero-gradient text-white shadow-xl relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-6xl mx-auto px-4 py-8 md:py-12 relative z-10 flex flex-col items-center text-center gap-6">
@@ -72,8 +73,9 @@
                 </div>
             </div>
 
-            <!-- Flight & Hotel Summary Cards -->
-            <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
+            <!-- Flight, Hotel & Currency Summary Cards (Responsive 3-Column Layout) -->
+            <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200">
+                <!-- Flight Card -->
                 <div onclick="openFlightModal()" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊檢視完整航班動態與明細">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-lg bg-sky-500/30 flex items-center justify-center text-sky-300 shrink-0 group-hover:scale-110 transition-transform">
@@ -83,13 +85,14 @@
                             <span class="text-sky-300 font-bold block group-hover:underline flex items-center gap-1">
                                 泰國亞航 (FD242 / FD243) <i class="fa-solid fa-circle-info text-[10px] opacity-80"></i>
                             </span>
-                            <span class="text-slate-300 block">去 11/20 05:55 T1 ➔ 12:00 CTS (FD242)</span>
-                            <span class="text-slate-300 block">回 11/26 14:00 CTS ➔ 17:55 T1 (FD243)</span>
+                            <span class="text-slate-300 block">去 11/20 05:55 T1 ➔ 12:00 CTS</span>
+                            <span class="text-slate-300 block">回 11/26 14:00 CTS ➔ 17:55 T1</span>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right text-sky-300/60 text-xs group-hover:translate-x-1 transition-transform"></i>
                 </div>
 
+                <!-- Hotel Card -->
                 <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Sapporo&query_place_id=ChIJQ41CY3UpC18R-2j-UIspczI" target="_blank" rel="noopener noreferrer" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊在 Google 地圖開啟格拉斯麗札幌飯店位置">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-lg bg-emerald-500/30 flex items-center justify-center text-emerald-300 shrink-0 group-hover:scale-110 transition-transform">
@@ -105,6 +108,23 @@
                     </div>
                     <i class="fa-solid fa-location-dot text-emerald-400/80 text-xs group-hover:scale-125 transition-transform"></i>
                 </a>
+
+                <!-- Currency Exchange Quick Card (New) -->
+                <div onclick="openCurrencyModal()" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊開啟日幣/台幣即時換算小工具 Pop-up">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500/30 flex items-center justify-center text-amber-300 shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-calculator text-base"></i>
+                        </div>
+                        <div>
+                            <span class="text-amber-300 font-bold block group-hover:underline flex items-center gap-1">
+                                日幣匯率試算 <i class="fa-solid fa-circle-info text-[10px] opacity-80"></i>
+                            </span>
+                            <span class="text-slate-300 block">預設匯率 0.215</span>
+                            <span class="text-slate-400 text-[10px]">即時試算 & 購物價格對照表</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-yen-sign text-amber-300/80 text-xs group-hover:scale-125 transition-transform"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -131,7 +151,7 @@
                 <div class="bg-sky-50/70 p-4 rounded-2xl border border-sky-100 space-y-3">
                     <div class="flex justify-between items-center border-b border-sky-200/60 pb-2">
                         <span class="font-bold text-sky-900 flex items-center gap-1.5">
-                            <i class="fa-solid fa-plane-flight text-sky-600"></i> 去程：2026/11/20 (五)
+                            <i class="fa-solid fa-plane-circle-check text-sky-600"></i> 去程：2026/11/20 (五)
                         </span>
                         <span class="bg-sky-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">泰國亞航 FD242</span>
                     </div>
@@ -211,7 +231,99 @@
         </div>
     </div>
 
+    <!-- Currency Modal (Pop-up Window) -->
+    <div id="currency-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col max-h-[90vh]">
+            <div class="bg-gradient-to-r from-slate-900 via-amber-950 to-slate-900 text-white p-5 flex justify-between items-center relative">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg border border-amber-400/30">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">日幣 / 台幣即時換算小工具</h3>
+                        <p class="text-amber-200/80 text-xs">購物快速試算與常用價格參考</p>
+                    </div>
+                </div>
+                <button onclick="closeCurrencyModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto space-y-5 text-slate-700 text-sm">
+                <!-- Inputs Section -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">日幣金額 (JPY)</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 font-bold">¥</span>
+                            <input type="number" id="modal-jpy-input" placeholder="例如：10000" class="w-full pl-8 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-800 font-bold">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">匯率 (Rate)</label>
+                        <div class="relative">
+                            <input type="number" id="modal-rate-input" value="0.215" step="0.001" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-800 font-bold">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Preset Buttons -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 mb-1.5">快速選擇金額：</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="setPresetJPY(1000)" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold transition">¥1,000</button>
+                        <button onclick="setPresetJPY(5000)" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold transition">¥5,000</button>
+                        <button onclick="setPresetJPY(10000)" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold transition">¥10,000</button>
+                        <button onclick="setPresetJPY(30000)" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold transition">¥30,000</button>
+                        <button onclick="setPresetJPY(50000)" class="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold transition">¥50,000</button>
+                    </div>
+                </div>
+
+                <!-- Result Card -->
+                <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-4.5 rounded-2xl shadow-md flex justify-between items-center">
+                    <div>
+                        <span class="text-amber-100 text-xs block font-medium">折合新台幣約</span>
+                        <span id="modal-twd-result" class="text-2xl sm:text-3xl font-black tracking-tight">NT$ 0</span>
+                    </div>
+                    <div class="text-right text-amber-100">
+                        <i class="fa-solid fa-coins text-3xl opacity-80"></i>
+                    </div>
+                </div>
+
+                <!-- Shopping Price Reference Table -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-xs text-slate-700 flex items-center justify-between">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-table-list text-amber-600"></i> 常用購物價格快速對照表</span>
+                        <span class="text-[11px] text-slate-400 font-normal">匯率：<span id="table-rate-display">0.215</span></span>
+                    </h4>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-xs text-left">
+                            <thead class="bg-slate-100 text-slate-600 border-b border-slate-200 font-semibold">
+                                <tr>
+                                    <th class="p-2.5">日幣 (JPY)</th>
+                                    <th class="p-2.5">約合台幣 (TWD)</th>
+                                    <th class="p-2.5">常見商品參考</th>
+                                </tr>
+                            </thead>
+                            <tbody id="reference-table-body" class="divide-y divide-slate-100 text-slate-700">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+                <button onclick="closeCurrencyModal()" class="px-5 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-900 text-white transition">
+                    關閉
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation & Content Area -->
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6">
+        
         <!-- 區塊一：每日行程導覽 (Day 1 - Day 7) -->
         <div class="mb-3">
             <div class="text-xs font-bold text-slate-500 mb-1.5 px-1 flex items-center gap-1.5">
@@ -1011,7 +1123,7 @@
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">德壽 燒肉 (Tokuju)</h3>
                                 <p class="text-xs text-emerald-700 font-medium mb-3"><i class="fa-solid fa-fire-burner mr-1"></i> 平假日皆有超值商業午餐</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    札幌在地超人氣頂級和牛燒肉店！重點推薦：<strong>平假日皆有提供超划算商業午餐套餐</strong>，用實惠價格就能享用極品北海道牛肉！
+                                    札幌在地超人氣頂級和牛燒肉店！重點推薦：<strong>平假日皆有提供超劃算商業午餐套餐</strong>，用實惠價格就能享用極品北海道牛肉！
                                 </p>
                             </div>
                             
@@ -1220,7 +1332,7 @@
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">Levi's 牛仔褲 (美式丹寧)</h3>
                                 <p class="text-xs text-blue-700 font-medium mb-3"><i class="fa-solid fa-vest mr-1"></i> 日本限定 501 / LVC 復刻系列</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    在日本購買 Levi's 搭配退稅非常划算！特別是三井 Outlet 店常有買多件折扣，市區專櫃則有豐富的日本限定與 Made in Japan 褲款。
+                                    在日本購買 Levi's 搭配退稅非常劃算！特別是三井 Outlet 店常有買多件折扣，市區專櫃則有豐富的日本限定與 Made in Japan 褲款。
                                 </p>
                             </div>
                             
@@ -1461,7 +1573,7 @@
                 <!-- Currency Converter Card -->
                 <div class="glass-card rounded-2xl p-6 shadow-sm border border-sky-100">
                     <div class="flex items-center gap-3 border-b border-slate-100 pb-3 mb-4">
-                        <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
                             <i class="fa-solid fa-calculator"></i>
                         </div>
                         <div>
@@ -1472,15 +1584,15 @@
                     <div class="grid sm:grid-cols-3 gap-4 text-xs">
                         <div>
                             <label class="block font-medium text-slate-700 mb-1">日幣金額 (JPY)</label>
-                            <input type="number" id="jpy-input" placeholder="例如：10000" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+                            <input type="number" id="jpy-input" placeholder="例如：10000" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label class="block font-medium text-slate-700 mb-1">估算匯率</label>
-                            <input type="number" id="rate-input" value="0.215" step="0.001" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+                            <input type="number" id="rate-input" value="0.215" step="0.001" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label class="block font-medium text-slate-700 mb-1">折合新台幣 (TWD)</label>
-                            <div id="twd-result" class="w-full px-3 py-2 bg-sky-50 text-sky-900 font-bold rounded-xl border border-sky-100 text-sm flex items-center">
+                            <div id="twd-result" class="w-full px-3 py-2 bg-amber-50 text-amber-900 font-bold rounded-xl border border-amber-200 text-sm flex items-center">
                                 NT$ 0
                             </div>
                         </div>
@@ -1547,7 +1659,9 @@
         </div>
     </footer>
 
+    <!-- JavaScript Interactions & LocalStorage Handler -->
     <script>
+        // Modal Handlers (Flight Modal)
         window.openFlightModal = function() {
             const modal = document.getElementById('flight-modal');
             if (modal) {
@@ -1558,6 +1672,25 @@
 
         window.closeFlightModal = function() {
             const modal = document.getElementById('flight-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        };
+
+        // Modal Handlers (Currency Converter Modal)
+        window.openCurrencyModal = function() {
+            const modal = document.getElementById('currency-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                calculateModalCurrency();
+                updateReferenceTable();
+            }
+        };
+
+        window.closeCurrencyModal = function() {
+            const modal = document.getElementById('currency-modal');
             if (modal) {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
@@ -1599,9 +1732,10 @@
             }
         };
 
+        // Tab Switcher Logic
         window.switchTab = function(targetId, event) {
             if (event) {
-                event.preventDefault(); // 防止點擊按鈕時跳回頁面最上方
+                event.preventDefault();
             }
 
             document.querySelectorAll('.tab-pane').forEach(pane => {
@@ -1646,6 +1780,7 @@
             });
         };
 
+        // Realtime Countdown Logic
         const departureDate = new Date('2026-11-20T05:55:00+08:00').getTime();
 
         function updateCountdown() {
@@ -1678,6 +1813,7 @@
             secondsEl.innerText = String(seconds).padStart(2, '0');
         }
 
+        // Currency Calculator (Toolbox Tab)
         const jpyInput = document.getElementById('jpy-input');
         const rateInput = document.getElementById('rate-input');
         const twdResult = document.getElementById('twd-result');
@@ -1695,6 +1831,67 @@
             rateInput.addEventListener('input', calculateTWD);
         }
 
+        // Modal Currency Calculator Logic
+        const modalJpyInput = document.getElementById('modal-jpy-input');
+        const modalRateInput = document.getElementById('modal-rate-input');
+        const modalTwdResult = document.getElementById('modal-twd-result');
+        const tableRateDisplay = document.getElementById('table-rate-display');
+
+        function calculateModalCurrency() {
+            if (!modalJpyInput || !modalRateInput || !modalTwdResult) return;
+            const jpy = parseFloat(modalJpyInput.value) || 0;
+            const rate = parseFloat(modalRateInput.value) || 0.215;
+            const twd = Math.round(jpy * rate);
+            modalTwdResult.innerText = `NT$ ${twd.toLocaleString()}`;
+            if (tableRateDisplay) {
+                tableRateDisplay.innerText = rate.toString();
+            }
+        }
+
+        window.setPresetJPY = function(amount) {
+            if (modalJpyInput) {
+                modalJpyInput.value = amount;
+                calculateModalCurrency();
+            }
+        };
+
+        const referenceItems = [
+            { jpy: 200, label: "罐裝飲料 / 超市點心" },
+            { jpy: 500, label: "地下鐵單程車票 / 便利商店飯糰" },
+            { jpy: 1000, label: "拉麵 / 湯咖哩 / KINOTOYA 甜點" },
+            { jpy: 3000, label: "成吉思汗烤羊肉 / 六花亭伴手禮組" },
+            { jpy: 5000, label: "根室花丸澎湃壽司餐 / 景品公仔" },
+            { jpy: 10000, label: "富士山頂級壽喜燒 / JINS 快取眼鏡" },
+            { jpy: 30000, label: "Levi's 丹寧褲 / HOKA & On 潮流跑鞋" },
+            { jpy: 50000, label: "Outlet 品牌包款 / 藥妝大採購" }
+        ];
+
+        function updateReferenceTable() {
+            const tbody = document.getElementById('reference-table-body');
+            if (!tbody) return;
+            const rate = parseFloat(modalRateInput ? modalRateInput.value : 0.215) || 0.215;
+            
+            tbody.innerHTML = referenceItems.map(item => {
+                const twd = Math.round(item.jpy * rate);
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="p-2.5 font-bold text-slate-800">¥${item.jpy.toLocaleString()}</td>
+                        <td class="p-2.5 font-bold text-amber-700">NT$ ${twd.toLocaleString()}</td>
+                        <td class="p-2.5 text-slate-500">${item.label}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        if (modalJpyInput && modalRateInput) {
+            modalJpyInput.addEventListener('input', calculateModalCurrency);
+            modalRateInput.addEventListener('input', () => {
+                calculateModalCurrency();
+                updateReferenceTable();
+            });
+        }
+
+        // Initialization & LocalStorage Persistence
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(updateCountdown, 1000);
             updateCountdown();
