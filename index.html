@@ -49,8 +49,6 @@
     <header class="hero-gradient text-white shadow-xl relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-6xl mx-auto px-4 py-8 md:py-12 relative z-10 flex flex-col items-center text-center gap-6">
-            
-            <!-- Main Title Section -->
             <div>
                 <div class="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-sky-400/30">
                     <i class="fa-solid fa-snowflake animate-spin text-sky-300" style="animation-duration: 8s;"></i> 2026 北海道冬日秋末之旅
@@ -61,7 +59,7 @@
                 </p>
             </div>
 
-            <!-- Countdown Box (Placed directly below title) -->
+            <!-- Countdown Box (Placed right below title) -->
             <div class="bg-slate-900/80 border border-slate-700/80 p-5 rounded-2xl shadow-2xl backdrop-blur-md text-center w-full max-w-md shrink-0">
                 <div class="text-xs uppercase tracking-widest text-sky-400 font-semibold mb-2 flex items-center justify-center gap-1.5">
                     <i class="fa-regular fa-clock"></i> 距離起飛倒數 (11/20 05:55)
@@ -78,8 +76,8 @@
             </div>
 
             <!-- Flight & Hotel Summary Cards (Placed below countdown) -->
-            <div class="w-full max-w-2xl grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
-                <!-- Flight Card -->
+            <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
+                <!-- Flight Card (Triggers Modal) -->
                 <div onclick="openFlightModal()" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊檢視完整航班動態與明細">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-lg bg-sky-500/30 flex items-center justify-center text-sky-300 shrink-0 group-hover:scale-110 transition-transform">
@@ -96,7 +94,7 @@
                     <i class="fa-solid fa-chevron-right text-sky-300/60 text-xs group-hover:translate-x-1 transition-transform"></i>
                 </div>
 
-                <!-- Hotel Card -->
+                <!-- Hotel Card (Opens Google Maps) -->
                 <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Sapporo&query_place_id=ChIJQ41CY3UpC18R-2j-UIspczI" target="_blank" rel="noopener noreferrer" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊在 Google 地圖開啟格拉斯麗札幌飯店位置">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-lg bg-emerald-500/30 flex items-center justify-center text-emerald-300 shrink-0 group-hover:scale-110 transition-transform">
@@ -113,7 +111,6 @@
                     <i class="fa-solid fa-location-dot text-emerald-400/80 text-xs group-hover:scale-125 transition-transform"></i>
                 </a>
             </div>
-
         </div>
     </header>
 
@@ -221,8 +218,7 @@
     </div>
 
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6">
-        
-        <!-- BLOCK 1: Daily Itinerary Navigation Bar -->
+        <!-- 區塊一：每日行程導覽 (Day 1 - Day 7) -->
         <div class="mb-4">
             <div class="text-xs font-bold text-slate-500 mb-1.5 px-1 flex items-center gap-1.5">
                 <i class="fa-regular fa-calendar-days text-rose-500"></i> 每日行程規劃
@@ -252,7 +248,7 @@
             </div>
         </div>
 
-        <!-- BLOCK 2: Special Features & Tools Navigation Bar -->
+        <!-- 區塊二：主題特輯與小工具 (動漫挖寶、美食、購物清單、工具) -->
         <div class="mb-6">
             <div class="text-xs font-bold text-slate-500 mb-1.5 px-1 flex items-center gap-1.5">
                 <i class="fa-solid fa-layer-group text-purple-600"></i> 主題特輯與實用工具
@@ -870,7 +866,7 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
                         <div>
                             <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">必吃美食清單</span>
-                            <h2 class="text-2xl font-bold text-slate-800 mt-1">札幌必吃極致美饌、燒肉與甜點</h2>
+                            <h2 class="text-2xl font-bold text-slate-800 mt-1">札幌必吃極致美饌與排隊甜點</h2>
                         </div>
                         <div class="text-xs text-slate-500">
                             <i class="fa-solid fa-map-location-dot text-amber-600"></i> 點擊地點開啟 Google Maps 導覽
@@ -974,27 +970,27 @@
                             </a>
                         </div>
 
-                        <!-- Food 4: 富士山 涮涮鍋壽喜燒 -->
+                        <!-- Food 4: 日本牛肉涮涮鍋壽喜燒富士山 -->
                         <div class="food-card-bg rounded-2xl p-5 border border-red-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
                             <div>
                                 <div class="flex justify-between items-start mb-3">
-                                    <span class="bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">和牛頂級饗宴</span>
+                                    <span class="bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">頂級和牛壽喜燒</span>
                                     <label class="cursor-pointer flex items-center gap-1 text-xs text-red-700 font-semibold">
-                                        <input type="checkbox" data-food="f_fuji" class="rounded text-red-600 food-checkbox"> 已征服
+                                        <input type="checkbox" data-food="f8" class="rounded text-red-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">日本牛肉涮涮鍋壽喜燒 富士山</h3>
-                                <p class="text-xs text-red-700 font-medium mb-3"><i class="fa-solid fa-bowl-food mr-1"></i> A5 白老牛/和牛壽喜燒</p>
+                                <p class="text-xs text-red-700 font-medium mb-3"><i class="fa-solid fa-drumstick-bite mr-1"></i> A5 白老牛 & 展望大通公園美景</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    位於 Le Trois 8 樓的高空極品和牛鍋物！提供頂級白老牛涮涮鍋與特製醬汁壽喜燒，可邊賞大通公園夜景邊享用絕美和牛。
+                                    主打嚴選北海道黑毛和牛與「白老牛」高檔壽喜燒/涮涮鍋！位於 8 樓能俯瞰大通公園景緻，肉質入口即化。
                                 </p>
                             </div>
                             
-                            <a href="https://www.google.com/maps/search/?api=1&query=Fujiyama+Shabu+Shabu+Sukiyaki+Sapporo&query_place_id=ChIJS4pbLL8pC18RxlZ-ggXaU24" target="_blank" rel="noopener noreferrer" class="bg-red-50 hover:bg-red-100/80 p-3.5 rounded-xl border border-red-200 flex items-center justify-between group transition">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Wagyu+ShabuShabu+Sukiyaki+Fujiyama&query_place_id=ChIJT4i3NJ0pC18RjG1R3x3c9eU" target="_blank" rel="noopener noreferrer" class="bg-red-50 hover:bg-red-100/80 p-3.5 rounded-xl border border-red-200 flex items-center justify-between group transition">
                                 <div class="space-y-1 pr-2">
                                     <div class="text-xs font-bold text-red-900 flex items-center gap-1.5">
                                         <i class="fa-solid fa-map-location-dot text-red-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-red-950">Le Trois 8F (大通公園旁)</span>
+                                        <span class="text-sm font-extrabold text-red-950">大通 Le Trois 8F</span>
                                     </div>
                                     <p class="text-xs text-red-900 font-medium leading-snug">
                                         札幌市中央區大通西1丁目13 Le Trois 8F
@@ -1006,36 +1002,33 @@
                             </a>
                         </div>
 
-                        <!-- Food 5: 德壽 燒肉 (Tokuju) -->
-                        <div class="food-card-bg rounded-2xl p-5 border border-rose-300 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                        <!-- Food 5: 德壽 (Tokuju) 燒肉 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-emerald-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
                             <div>
                                 <div class="flex justify-between items-start mb-3">
-                                    <span class="bg-rose-700 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">高 CP 值燒肉名店</span>
-                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-rose-700 font-semibold">
-                                        <input type="checkbox" data-food="f_tokuju" class="rounded text-rose-600 food-checkbox"> 已征服
+                                    <span class="bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">高 CP 值商業午餐</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-emerald-700 font-semibold">
+                                        <input type="checkbox" data-food="f9" class="rounded text-emerald-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">德壽 (Tokuju Yakiniku)</h3>
-                                <p class="text-xs text-rose-700 font-medium mb-3"><i class="fa-solid fa-drumstick-bite mr-1"></i> 著名黑毛和牛燒肉</p>
-                                <p class="text-xs text-slate-600 leading-relaxed mb-2">
-                                    札幌超人氣在地燒肉品牌，嚴選高品質北海道產和牛與特上牛舌！
+                                <h3 class="text-xl font-bold text-slate-800 mb-1">德壽 燒肉 (Tokuju)</h3>
+                                <p class="text-xs text-emerald-700 font-medium mb-3"><i class="fa-solid fa-fire-burner mr-1"></i> 平假日皆有超值商業午餐</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    札幌在地超人氣頂級和牛燒肉店！重點推薦：<strong>平假日皆有提供超划算商業午餐套餐</strong>，用實惠價格就能享用極品北海道牛肉！
                                 </p>
-                                <div class="bg-rose-50 border border-rose-200 p-2 rounded-lg text-rose-900 font-bold text-[11px] mb-4">
-                                    💡 推薦亮點：平假日皆有提供超高 CP 值超值商業午餐！
-                                </div>
                             </div>
                             
-                            <a href="https://www.google.com/maps/search/?api=1&query=Tokuju+Asty45+Sapporo&query_place_id=ChIJFwhyJwApC18RHQf5vH95aUY" target="_blank" rel="noopener noreferrer" class="bg-rose-50 hover:bg-rose-100/80 p-3.5 rounded-xl border border-rose-200 flex items-center justify-between group transition">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Tokuju+Odori+Store&query_place_id=ChIJwUpP5p4pC18R7Y2i7T3k5pU" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100/80 p-3.5 rounded-xl border border-emerald-200 flex items-center justify-between group transition">
                                 <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-rose-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-rose-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-rose-950">Asty 45 店 (札幌站前)</span>
+                                    <div class="text-xs font-bold text-emerald-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-map-location-dot text-emerald-600 text-sm"></i>
+                                        <span class="text-sm font-extrabold text-emerald-950">大通店 / しんや店</span>
                                     </div>
-                                    <p class="text-xs text-rose-900 font-medium leading-snug">
-                                        札幌市中央區北4條西5丁目 Asty 45大樓 1F
+                                    <p class="text-xs text-emerald-900 font-medium leading-snug">
+                                        札幌市中央區南3條西2丁目（近狸小路 2 丁目附近）
                                     </p>
                                 </div>
-                                <span class="bg-rose-700 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-800 shadow-xs">
+                                <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-emerald-700 shadow-xs">
                                     地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                                 </span>
                             </a>
@@ -1053,7 +1046,7 @@
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">DONGURI (どんぐり 麵包工房)</h3>
                                 <p class="text-xs text-orange-700 font-medium mb-3"><i class="fa-solid fa-bread-slice mr-1"></i> 札幌傳奇！必吃竹輪鮪魚麵包</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    札幌當地人人知曉的名店！必吃招牌 No.1「竹輪麵包 (ちくわパン)」，彈牙竹輪包著滿滿鮪魚沙拉，外層包裹香軟麵包！
+                                    札幌當地人人知曉的名店！必吃招牌 No.1「竹輪麵包 (ちくわパン)」，彈牙竹輪包著滿滿鮪魚沙拉，外層包裹香軟麵包，高 CP 值又美味！
                                 </p>
                             </div>
                             
@@ -1064,7 +1057,7 @@
                                         <span class="text-sm font-extrabold text-orange-950">大通店 (Le Trois 1F)</span>
                                     </div>
                                     <p class="text-xs text-orange-900 font-medium leading-snug">
-                                        札幌市中央區大通西1丁目13 Le Trois 1F
+                                        札幌市中央區大通西1丁目13 Le Trois 1F（地下鐵大通站直通）
                                     </p>
                                 </div>
                                 <span class="bg-orange-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-orange-700 shadow-xs">
@@ -1096,7 +1089,7 @@
                                         <span class="text-sm font-extrabold text-amber-950">大通公園店 (Cafe)</span>
                                     </div>
                                     <p class="text-xs text-amber-900 font-medium leading-snug">
-                                        札幌市中央區大通西3丁目7 北洋大通 Center 1F
+                                        札幌市中央區大通西3丁目7 北洋大通 Center 1F（近地下鐵大通站）
                                     </p>
                                 </div>
                                 <span class="bg-amber-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
@@ -1117,7 +1110,7 @@
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">BARISTART COFFEE @ 狸小路</h3>
                                 <p class="text-xs text-stone-700 font-medium mb-3"><i class="fa-solid fa-mug-hot mr-1"></i> 北海道單一牧場鮮乳客製拿鐵</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    主打使用北海道特選單一牧場鮮乳（美瑛町、十勝、函館鮮乳）配對特選義式濃縮，調配出甘甜圓潤的特調拿鐵！
+                                    主打使用北海道特選單一牧場鮮乳（美瑛町、十勝、函館鮮乳）配對特選義式濃縮，調配出甘甜圓潤且奶香極濃的傳奇拿鐵！
                                 </p>
                             </div>
                             
@@ -1128,7 +1121,7 @@
                                         <span class="text-sm font-extrabold text-stone-950">狸小路店 (南3條)</span>
                                     </div>
                                     <p class="text-xs text-stone-900 font-medium leading-snug">
-                                        札幌市中央區南3條西5丁目14 三條美松大樓 1F
+                                        札幌市中央區南3條西5丁目14 三條美松大樓 1F（近狸小路 5 丁目）
                                     </p>
                                 </div>
                                 <span class="bg-stone-800 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-black shadow-xs">
@@ -1138,7 +1131,7 @@
                         </div>
 
                         <!-- Food 9: 六花亭 札幌本店 -->
-                        <div class="food-card-bg rounded-2xl p-5 border border-rose-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                        <div class="food-card-bg rounded-2xl p-5 border border-rose-200 shadow-sm flex flex-col justify-between hover:shadow-md transition md:col-span-3">
                             <div>
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="bg-rose-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">北海道代表甜點</span>
@@ -1147,9 +1140,9 @@
                                     </label>
                                 </div>
                                 <h3 class="text-xl font-bold text-slate-800 mb-1">六花亭 (Rokkatei 札幌本店)</h3>
-                                <p class="text-xs text-rose-700 font-medium mb-3"><i class="fa-solid fa-cookie-bite mr-1"></i> 丸成奶油餅乾 & 本店限定夾心餅</p>
+                                <p class="text-xs text-rose-700 font-medium mb-3"><i class="fa-solid fa-cookie-bite mr-1"></i> 經典丸成奶油餅乾 & 本店限定冰淇淋夾心餅</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    除了帶回台的丸成奶油餅乾外，札幌本店 2F 喫茶室更提供限定「賞味期限 3 小時」脆皮泡芙與「丸成冰淇淋夾心餅」！
+                                    除了帶回台的「丸成奶油夾心餅 (Marusei Butter Sandwich)」外，札幌本店 2F 喫茶室更提供限定「賞味期限 3 小時」脆皮泡芙與「丸成冰淇淋夾心餅」，搭配高品質免費內用咖啡！
                                 </p>
                             </div>
                             
@@ -1160,7 +1153,7 @@
                                         <span class="text-sm font-extrabold text-rose-950">札幌本店（近 JR 札幌站南口）</span>
                                     </div>
                                     <p class="text-xs text-rose-900 font-medium leading-snug">
-                                        札幌市中央區北4條西6丁目3-3（JR 札幌站步行5分）
+                                        札幌市中央區北4條西6丁目3-3（從 JR 札幌站南口步行約 5 分鐘）
                                     </p>
                                 </div>
                                 <span class="bg-rose-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-700 shadow-xs">
@@ -1472,7 +1465,6 @@
     </footer>
 
     <script>
-        // Global modal functions
         window.openFlightModal = function() {
             const modal = document.getElementById('flight-modal');
             if (modal) {
@@ -1524,7 +1516,6 @@
             }
         };
 
-        // Tab switching logic
         window.switchTab = function(targetId) {
             document.querySelectorAll('.tab-pane').forEach(pane => {
                 pane.classList.add('hidden');
@@ -1562,10 +1553,8 @@
                     }
                 }
             });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
-        // Robust Countdown Timer
         const departureDate = new Date('2026-11-20T05:55:00+08:00').getTime();
 
         function updateCountdown() {
@@ -1598,7 +1587,6 @@
             secondsEl.innerText = String(seconds).padStart(2, '0');
         }
 
-        // Currency Converter Logic
         const jpyInput = document.getElementById('jpy-input');
         const rateInput = document.getElementById('rate-input');
         const twdResult = document.getElementById('twd-result');
@@ -1616,7 +1604,6 @@
             rateInput.addEventListener('input', calculateTWD);
         }
 
-        // LocalStorage Checkboxes Sync
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(updateCountdown, 1000);
             updateCountdown();
@@ -1652,3 +1639,8 @@
     </script>
 </body>
 </html>
+```eof
+
+### 更新說明：
+* **移除自動置頂**：將 `switchTab` 裡的 `window.scrollTo` 移除後，切換頁籤時畫面將原地切換內容，不再跳回頁面頂端。
+* **貼上步驟**：只需全選複製上方代碼，貼至 GitHub 的 `index.html` 覆蓋並 Commit 即可！
