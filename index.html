@@ -46,7 +46,6 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-rose-500 selection:text-white">
 
-    <!-- Hero Banner Header -->
     <header class="hero-gradient text-white shadow-xl relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-6xl mx-auto px-4 py-8 md:py-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -115,7 +114,6 @@
         </div>
     </header>
 
-    <!-- FLIGHT DETAILS MODAL (Pop-up Window) -->
     <div id="flight-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
         <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col max-h-[90vh]">
             <!-- Modal Header -->
@@ -223,7 +221,6 @@
         </div>
     </div>
 
-    <!-- Main Content Area -->
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6">
         <!-- Navigation Grid (No Scrollbar / 格狀排版) -->
         <div class="grid grid-cols-3 md:grid-cols-9 gap-1.5 p-1.5 bg-slate-200/80 rounded-2xl mb-6 shadow-inner">
@@ -905,57 +902,24 @@
     </footer>
 
     <script>
-        // Tab switching logic
-        function switchTab(targetId) {
-            document.querySelectorAll('.tab-pane').forEach(pane => {
-                pane.classList.add('hidden');
-            });
-            const selectedPane = document.getElementById(targetId);
-            if (selectedPane) {
-                selectedPane.classList.remove('hidden');
-            }
-
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                const btnTarget = btn.getAttribute('data-target');
-                if (btnTarget === targetId) {
-                    if (targetId === 'food') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-amber-500 text-white shadow-md flex items-center justify-center gap-1";
-                    } else if (targetId === 'toolbox') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-slate-900 text-sky-300 shadow-md flex items-center justify-center gap-1";
-                    } else {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md";
-                    }
-                } else {
-                    if (btnTarget === 'food') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1";
-                    } else if (btnTarget === 'toolbox') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1";
-                    } else {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs";
-                    }
-                }
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Flight Modal Logic
-        function openFlightModal() {
+        // Define modal functions globally so onclick works reliably
+        window.openFlightModal = function() {
             const modal = document.getElementById('flight-modal');
             if (modal) {
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
-        }
+        };
 
-        function closeFlightModal() {
+        window.closeFlightModal = function() {
             const modal = document.getElementById('flight-modal');
             if (modal) {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
             }
-        }
+        };
 
-        function openStandaloneFlightWindow() {
+        window.openStandaloneFlightWindow = function() {
             const windowFeatures = "width=600,height=700,resizable=yes,scrollbars=yes,status=yes";
             const flightContent = `
                 <!DOCTYPE html>
@@ -988,7 +952,40 @@
                 win.document.write(flightContent);
                 win.document.close();
             }
-        }
+        };
+
+        // Tab switching logic
+        window.switchTab = function(targetId) {
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.add('hidden');
+            });
+            const selectedPane = document.getElementById(targetId);
+            if (selectedPane) {
+                selectedPane.classList.remove('hidden');
+            }
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                const btnTarget = btn.getAttribute('data-target');
+                if (btnTarget === targetId) {
+                    if (targetId === 'food') {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-amber-500 text-white shadow-md flex items-center justify-center gap-1";
+                    } else if (targetId === 'toolbox') {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-slate-900 text-sky-300 shadow-md flex items-center justify-center gap-1";
+                    } else {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md";
+                    }
+                } else {
+                    if (btnTarget === 'food') {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1";
+                    } else if (btnTarget === 'toolbox') {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1";
+                    } else {
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs";
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
 
         // Robust Countdown Timer targeting 2026-11-20T05:55:00+08:00
         const departureDate = new Date('2026-11-20T05:55:00+08:00').getTime();
@@ -1069,3 +1066,11 @@
                             } else {
                                 chk.closest('label').classList.remove('bg-sky-50/60', 'border-sky-200');
                             }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
