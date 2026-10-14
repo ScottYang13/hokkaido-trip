@@ -212,41 +212,48 @@
     </div>
 
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6">
-        <!-- Navigation Grid (Day 1 - Day 7 + 專屬頁籤) -->
-        <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-10 gap-1.5 p-1.5 bg-slate-200/80 rounded-2xl mb-6 shadow-inner">
-            <button onclick="switchTab('day1')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md" data-target="day1">
-                Day 1 抵達
-            </button>
-            <button onclick="switchTab('day2')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day2">
-                Day 2 神宮
-            </button>
-            <button onclick="switchTab('day3')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day3">
-                Day 3 Outlet
-            </button>
-            <button onclick="switchTab('day4')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day4">
-                Day 4 余市小樽
-            </button>
-            <button onclick="switchTab('day5')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day5">
-                Day 5 動物園
-            </button>
-            <button onclick="switchTab('day6')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day6">
-                Day 6 購物
-            </button>
-            <button onclick="switchTab('day7')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day7">
-                Day 7 賦歸
-            </button>
-            <button onclick="switchTab('food')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1" data-target="food">
-                <i class="fa-solid fa-utensils text-[10px]"></i> 美食
-            </button>
-            <button onclick="switchTab('shopping')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-emerald-700 hover:bg-emerald-50 shadow-xs flex items-center justify-center gap-1" data-target="shopping">
-                <i class="fa-solid fa-bag-shopping text-[10px]"></i> 購物
-            </button>
-            <button onclick="switchTab('checklist')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-rose-700 hover:bg-rose-50 shadow-xs flex items-center justify-center gap-1" data-target="checklist">
-                <i class="fa-solid fa-suitcase-rolling text-[10px]"></i> 行李清單
-            </button>
-            <button onclick="switchTab('toolbox')" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1 col-span-3 sm:col-span-1" data-target="toolbox">
-                <i class="fa-solid fa-toolbox text-[10px]"></i> 工具
-            </button>
+        <!-- 導覽按鈕區塊分割 -->
+        <div class="space-y-3 mb-6">
+            <!-- 區塊一：Day 1 ~ Day 7 行程天數 -->
+            <div class="grid grid-cols-3 sm:grid-cols-7 gap-1.5 p-1.5 bg-slate-200/80 rounded-2xl shadow-inner">
+                <button onclick="switchTab('day1', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md" data-target="day1">
+                    Day 1 抵達
+                </button>
+                <button onclick="switchTab('day2', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day2">
+                    Day 2 神宮
+                </button>
+                <button onclick="switchTab('day3', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day3">
+                    Day 3 Outlet
+                </button>
+                <button onclick="switchTab('day4', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day4">
+                    Day 4 余市小樽
+                </button>
+                <button onclick="switchTab('day5', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day5">
+                    Day 5 動物園
+                </button>
+                <button onclick="switchTab('day6', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs" data-target="day6">
+                    Day 6 購物
+                </button>
+                <button onclick="switchTab('day7', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs col-span-3 sm:col-span-1" data-target="day7">
+                    Day 7 賦歸
+                </button>
+            </div>
+
+            <!-- 區塊二：美食、購物、行李清單、工具 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1.5 bg-slate-200/80 rounded-2xl shadow-inner">
+                <button onclick="switchTab('food', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1" data-target="food">
+                    <i class="fa-solid fa-utensils text-[10px]"></i> 美食
+                </button>
+                <button onclick="switchTab('shopping', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-emerald-700 hover:bg-emerald-50 shadow-xs flex items-center justify-center gap-1" data-target="shopping">
+                    <i class="fa-solid fa-bag-shopping text-[10px]"></i> 購物
+                </button>
+                <button onclick="switchTab('checklist', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-rose-700 hover:bg-rose-50 shadow-xs flex items-center justify-center gap-1" data-target="checklist">
+                    <i class="fa-solid fa-suitcase-rolling text-[10px]"></i> 行李清單
+                </button>
+                <button onclick="switchTab('toolbox', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1" data-target="toolbox">
+                    <i class="fa-solid fa-toolbox text-[10px]"></i> 工具
+                </button>
+            </div>
         </div>
 
         <div id="tab-contents">
@@ -864,7 +871,7 @@
                 </div>
             </div>
 
-            <!-- CHECKLIST TAB (出國檢查清單完整收錄) -->
+            <!-- CHECKLIST TAB -->
             <div id="checklist" class="tab-pane hidden space-y-6">
                 <div class="glass-card rounded-2xl p-6 shadow-sm border border-rose-200/80 bg-gradient-to-b from-rose-50/20 via-white to-white">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
@@ -884,34 +891,13 @@
                                 <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> 重要‼️
                             </h3>
                             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs">
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p1" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-800 font-bold">護照（護照護照很重要說三次！）</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p2" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">外幣</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p3" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">信用卡</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p4" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">鑰匙</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p5" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">VJW (Visit Japan Web)</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p6" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">住宿資料</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100">
-                                    <input type="checkbox" data-pack="chk-p7" class="h-4 w-4 rounded text-rose-600 pack-checkbox">
-                                    <span class="text-slate-700 font-medium">eSIM / 上網卡</span>
-                                </label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p1" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-800 font-bold">護照（護照護照很重要說三次！）</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p2" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">外幣</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p3" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">信用卡</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p4" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">鑰匙</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p5" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">VJW (Visit Japan Web)</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p6" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">住宿資料</span></label>
+                                <label class="flex items-center gap-2.5 p-2 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100"><input type="checkbox" data-pack="chk-p7" class="h-4 w-4 rounded text-rose-600 pack-checkbox"><span class="text-slate-700 font-medium">eSIM / 上網卡</span></label>
                             </div>
                         </div>
 
@@ -1175,7 +1161,11 @@
             }
         };
 
-        window.switchTab = function(targetId) {
+        window.switchTab = function(targetId, event) {
+            if (event) {
+                event.preventDefault(); // 防止點擊按鈕時跳到頁面最上方
+            }
+
             document.querySelectorAll('.tab-pane').forEach(pane => {
                 pane.classList.add('hidden');
             });
@@ -1194,7 +1184,7 @@
                     } else if (targetId === 'checklist') {
                         btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md flex items-center justify-center gap-1.5";
                     } else if (targetId === 'toolbox') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-slate-900 text-sky-300 shadow-md flex items-center justify-center gap-1.5 col-span-3 sm:col-span-1";
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-slate-900 text-sky-300 shadow-md flex items-center justify-center gap-1.5";
                     } else {
                         btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-rose-600 text-white shadow-md";
                     }
@@ -1206,7 +1196,7 @@
                     } else if (btnTarget === 'checklist') {
                         btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-rose-700 hover:bg-rose-50 shadow-xs flex items-center justify-center gap-1.5";
                     } else if (btnTarget === 'toolbox') {
-                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1.5 col-span-3 sm:col-span-1";
+                        btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-900 hover:bg-slate-100 shadow-xs flex items-center justify-center gap-1.5";
                     } else {
                         btn.className = "tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-slate-700 hover:bg-slate-100 shadow-xs";
                     }
