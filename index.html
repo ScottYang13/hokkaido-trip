@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <!-- Flight, Hotel & Currency Summary Cards (Responsive 3-Column Layout) -->
+            <!-- Flight, Hotel & Currency Summary Cards -->
             <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-200">
                 <!-- Flight Card -->
                 <div onclick="openFlightModal()" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊檢視完整航班動態與明細">
@@ -109,7 +109,7 @@
                     <i class="fa-solid fa-location-dot text-emerald-400/80 text-xs group-hover:scale-125 transition-transform"></i>
                 </a>
 
-                <!-- Currency Exchange Quick Card (New) -->
+                <!-- Currency Exchange Quick Card -->
                 <div onclick="openCurrencyModal()" class="bg-white/10 p-3.5 rounded-xl backdrop-blur border border-white/15 flex items-center justify-between gap-3 hover:bg-white/20 transition group cursor-pointer shadow-sm text-left" title="點擊開啟日幣/台幣即時換算小工具 Pop-up">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-lg bg-amber-500/30 flex items-center justify-center text-amber-300 shrink-0 group-hover:scale-110 transition-transform">
@@ -364,7 +364,7 @@
                     <i class="fa-solid fa-gamepad text-[10px]"></i> 動漫挖寶
                 </button>
                 <button onclick="switchTab('food', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1" data-target="food">
-                    <i class="fa-solid fa-utensils text-[10px]"></i> 必吃美食
+                    <i class="fa-solid fa-utensils text-[10px]"></i> 必吃美食 (21處)
                 </button>
                 <button onclick="switchTab('shopping', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-emerald-700 hover:bg-emerald-50 shadow-xs flex items-center justify-center gap-1" data-target="shopping">
                     <i class="fa-solid fa-bag-shopping text-[10px]"></i> 購物指南
@@ -969,20 +969,20 @@
                 </div>
             </div>
 
-            <!-- GOURMET FOOD LIST TAB -->
+            <!-- GOURMET FOOD LIST TAB (All 21 Places - Equal 3-Column Grid) -->
             <div id="food" class="tab-pane hidden space-y-6">
                 <div class="glass-card rounded-2xl p-6 shadow-sm border border-amber-200/80 bg-gradient-to-b from-amber-50/20 via-white to-white">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">必吃美食清單</span>
-                            <h2 class="text-2xl font-bold text-slate-800 mt-1">札幌必吃極致美饌與排隊甜點</h2>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">必吃美食完整地圖 (21 處名店)</span>
+                            <h2 class="text-2xl font-bold text-slate-800 mt-1">札幌・小樽・余市・旭川極致美饌指南</h2>
                         </div>
                         <div class="text-xs text-slate-500">
                             <i class="fa-solid fa-map-location-dot text-amber-600"></i> 點擊地點開啟 Google Maps 導覽
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <!-- Food 1: 奧芝商店 -->
                         <div class="food-card-bg rounded-2xl p-5 border border-amber-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
                             <div>
@@ -992,25 +992,19 @@
                                         <input type="checkbox" data-food="f1" class="rounded text-amber-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">奧芝商店 (Okushiba Shoten)</h3>
-                                <p class="text-xs text-amber-700 font-medium mb-3"><i class="fa-solid fa-shrimp mr-1"></i> 濃郁濃海老（蝦湯）湯咖哩元祖</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">1. 奧芝商店 (Okushiba Shoten)</h3>
+                                <p class="text-xs text-amber-700 font-medium mb-2.5"><i class="fa-solid fa-shrimp mr-1"></i> 濃郁濃海老（蝦湯）湯咖哩元祖</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    以超過千隻甜蝦熬煮的濃郁蝦湯頭聞名！搭配滿滿北海道在地直送鮮蔬與香煎雞腿，是到札幌絕不能錯過的靈魂湯咖哩。
+                                    超過千隻甜蝦熬煮的濃郁蝦湯頭！搭配滿滿北海道在地直送鮮蔬與香煎雞腿。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Okushiba+Shoten+Soseiji&query_place_id=ChIJn8GXRXQpC18ROE27C3HlsNM" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3.5 rounded-xl border border-amber-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-amber-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-amber-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-amber-950">站前創成寺店</span>
-                                    </div>
-                                    <p class="text-xs text-amber-900 font-medium leading-snug">
-                                        札幌市中央區北4條西1丁目 Hokuren 大樓 B1F（近札幌站）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Okushiba+Shoten+Soseiji&query_place_id=ChIJn8GXRXQpC18ROE27C3HlsNM" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3 rounded-xl border border-amber-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-amber-950 block">站前創成寺店</span>
+                                    <p class="text-[11px] text-amber-900 font-medium truncate">札幌市中央區北4條西1丁目 B1F</p>
                                 </div>
-                                <span class="bg-amber-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1024,25 +1018,19 @@
                                         <input type="checkbox" data-food="f2" class="rounded text-rose-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">成吉思汗烤羊肉 (Daruma)</h3>
-                                <p class="text-xs text-rose-700 font-medium mb-3"><i class="fa-solid fa-fire mr-1"></i> 薄野成吉思汗達摩本店</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">2. 成吉思汗達摩 (Daruma)</h3>
+                                <p class="text-xs text-rose-700 font-medium mb-2.5"><i class="fa-solid fa-fire mr-1"></i> 薄野成吉思汗達摩本店</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    將新鮮無腥味的優質小羊肉放置於突起凸型鐵鍋炙烤，搭配特製秘醬與洋蔥，香氣四溢，配啤酒絕對大呼過癮！
+                                    新鮮無腥味的優質小羊肉在鐵鍋炙烤，搭配特製秘醬與洋蔥，香氣四溢。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Jingisukan+Daruma+Main+Store&query_place_id=ChIJbQQV34UpC18RgzQI7TQon1g" target="_blank" rel="noopener noreferrer" class="bg-rose-50 hover:bg-rose-100/80 p-3.5 rounded-xl border border-rose-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-rose-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-rose-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-rose-950">達摩本店（薄野）</span>
-                                    </div>
-                                    <p class="text-xs text-rose-900 font-medium leading-snug">
-                                        札幌市中央區南5條西4丁目4 1F（地下鐵薄野站步行3分）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Jingisukan+Daruma+Main+Store&query_place_id=ChIJbQQV34UpC18RgzQI7TQon1g" target="_blank" rel="noopener noreferrer" class="bg-rose-50 hover:bg-rose-100/80 p-3 rounded-xl border border-rose-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-rose-950 block">達摩本店（薄野）</span>
+                                    <p class="text-[11px] text-rose-900 font-medium truncate">札幌市中央區南5條西4丁目 1F</p>
                                 </div>
-                                <span class="bg-rose-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-rose-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1056,25 +1044,19 @@
                                         <input type="checkbox" data-food="f3" class="rounded text-sky-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">根室花丸 (Nemuro Hanamaru)</h3>
-                                <p class="text-xs text-sky-700 font-medium mb-3"><i class="fa-solid fa-fish mr-1"></i> 產地直送極鮮迴轉壽司</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">3. 根室花丸 (Nemuro Hanamaru)</h3>
+                                <p class="text-xs text-sky-700 font-medium mb-2.5"><i class="fa-solid fa-fish mr-1"></i> 產地直送極鮮迴轉壽司</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    北海道超人氣排隊迴轉壽司，嚴選根室港直送鮮美海產！必點特大帆立貝、鮭魚卵與牡丹蝦，口感甘甜飽滿。
+                                    嚴選根室港直送鮮美海產！必點特大帆立貝、鮭魚卵與牡丹蝦。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Nemuro+Hanamaru+JR+Tower+Stellar+Place&query_place_id=ChIJo4R12HQpC18RMlI-QkjBrEc" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3.5 rounded-xl border border-sky-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-sky-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-sky-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-sky-950">JR Tower 店</span>
-                                    </div>
-                                    <p class="text-xs text-sky-900 font-medium leading-snug">
-                                        札幌市中央區北5條西2丁目 JR Tower STELLAR PLACE 6F
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Nemuro+Hanamaru+JR+Tower+Stellar+Place&query_place_id=ChIJo4R12HQpC18RMlI-QkjBrEc" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-sky-950 block">JR Tower 店</span>
+                                    <p class="text-[11px] text-sky-900 font-medium truncate">STELLAR PLACE 6F</p>
                                 </div>
-                                <span class="bg-sky-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1088,25 +1070,19 @@
                                         <input type="checkbox" data-food="f8" class="rounded text-red-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">日本牛肉涮涮鍋壽喜燒 富士山</h3>
-                                <p class="text-xs text-red-700 font-medium mb-3"><i class="fa-solid fa-drumstick-bite mr-1"></i> A5 白老牛 & 展望大通公園美景</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">4. 富士山壽喜燒 (Fujiyama)</h3>
+                                <p class="text-xs text-red-700 font-medium mb-2.5"><i class="fa-solid fa-drumstick-bite mr-1"></i> A5 白老牛 & 展望美景</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    主打嚴選北海道黑毛和牛與「白老牛」高檔壽喜燒/涮涮鍋！位於 8 樓能俯瞰大通公園景緻，肉質入口即化。
+                                    主打嚴選北海道黑毛和牛與「白老牛」高檔壽喜燒，俯瞰大通公園美景。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Wagyu+ShabuShabu+Sukiyaki+Fujiyama&query_place_id=ChIJT4i3NJ0pC18RjG1R3x3c9eU" target="_blank" rel="noopener noreferrer" class="bg-red-50 hover:bg-red-100/80 p-3.5 rounded-xl border border-red-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-red-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-red-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-red-950">大通 Le Trois 8F</span>
-                                    </div>
-                                    <p class="text-xs text-red-900 font-medium leading-snug">
-                                        札幌市中央區大通西1丁目13 Le Trois 8F
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Wagyu+ShabuShabu+Sukiyaki+Fujiyama&query_place_id=ChIJT4i3NJ0pC18RjG1R3x3c9eU" target="_blank" rel="noopener noreferrer" class="bg-red-50 hover:bg-red-100/80 p-3 rounded-xl border border-red-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-red-950 block">大通 Le Trois 8F</span>
+                                    <p class="text-[11px] text-red-900 font-medium truncate">札幌市中央區大通西1丁目13</p>
                                 </div>
-                                <span class="bg-red-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-red-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-red-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1120,25 +1096,19 @@
                                         <input type="checkbox" data-food="f9" class="rounded text-emerald-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">德壽 燒肉 (Tokuju)</h3>
-                                <p class="text-xs text-emerald-700 font-medium mb-3"><i class="fa-solid fa-fire-burner mr-1"></i> 平假日皆有超值商業午餐</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">5. 德壽 燒肉 (Tokuju)</h3>
+                                <p class="text-xs text-emerald-700 font-medium mb-2.5"><i class="fa-solid fa-fire-burner mr-1"></i> 超值商業午餐燒肉</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    札幌在地超人氣頂級和牛燒肉店！重點推薦：<strong>平假日皆有提供超劃算商業午餐套餐</strong>，用實惠價格就能享用極品北海道牛肉！
+                                    札幌在地超人氣頂級和牛燒肉店！平假日皆有超劃算商業午餐套餐。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Tokuju+Odori+Store&query_place_id=ChIJwUpP5p4pC18R7Y2i7T3k5pU" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100/80 p-3.5 rounded-xl border border-emerald-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-emerald-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-emerald-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-emerald-950">大通店 / しんや店</span>
-                                    </div>
-                                    <p class="text-xs text-emerald-900 font-medium leading-snug">
-                                        札幌市中央區南3條西2丁目（近狸小路 2 丁目附近）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Tokuju+Odori+Store&query_place_id=ChIJwUpP5p4pC18R7Y2i7T3k5pU" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100/80 p-3 rounded-xl border border-emerald-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-emerald-950 block">大通店 / 狸小路</span>
+                                    <p class="text-[11px] text-emerald-900 font-medium truncate">札幌市中央區南3條西2丁目</p>
                                 </div>
-                                <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-emerald-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-emerald-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1152,25 +1122,19 @@
                                         <input type="checkbox" data-food="f4" class="rounded text-orange-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">DONGURI (どんぐり 麵包工房)</h3>
-                                <p class="text-xs text-orange-700 font-medium mb-3"><i class="fa-solid fa-bread-slice mr-1"></i> 札幌傳奇！必吃竹輪鮪魚麵包</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">6. DONGURI 麵包工房</h3>
+                                <p class="text-xs text-orange-700 font-medium mb-2.5"><i class="fa-solid fa-bread-slice mr-1"></i> 竹輪鮪魚麵包 (ちくわパン)</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    札幌當地人人知曉的名店！必吃招牌 No.1「竹輪麵包 (ちくわパン)」，彈牙竹輪包著滿滿鮪魚沙拉，外層包裹香軟麵包，高 CP 值又美味！
+                                    札幌當地傳奇麵包店！彈牙竹輪包著滿滿鮪魚沙拉，鹹香濃郁高 CP 值。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Donguri+Odori+Sapporo&query_place_id=ChIJUQDMNZ0pC18RcQCnoLe262U" target="_blank" rel="noopener noreferrer" class="bg-orange-50 hover:bg-orange-100/80 p-3.5 rounded-xl border border-orange-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-orange-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-orange-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-orange-950">大通店 (Le Trois 1F)</span>
-                                    </div>
-                                    <p class="text-xs text-orange-900 font-medium leading-snug">
-                                        札幌市中央區大通西1丁目13 Le Trois 1F（地下鐵大通站直通）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Donguri+Odori+Sapporo&query_place_id=ChIJUQDMNZ0pC18RcQCnoLe262U" target="_blank" rel="noopener noreferrer" class="bg-orange-50 hover:bg-orange-100/80 p-3 rounded-xl border border-orange-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-orange-950 block">大通店 (Le Trois 1F)</span>
+                                    <p class="text-[11px] text-orange-900 font-medium truncate">札幌地下鐵大通站直通</p>
                                 </div>
-                                <span class="bg-orange-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-orange-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-orange-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-orange-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1184,25 +1148,19 @@
                                         <input type="checkbox" data-food="f5" class="rounded text-amber-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">KINOTOYA (きのとや)</h3>
-                                <p class="text-xs text-amber-700 font-medium mb-3"><i class="fa-solid fa-ice-cream mr-1"></i> 極濃「極上牛乳ソフト」霜淇淋</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">7. KINOTOYA (きのとや)</h3>
+                                <p class="text-xs text-amber-700 font-medium mb-2.5"><i class="fa-solid fa-ice-cream mr-1"></i> 極濃「極上牛乳ソフト」</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    連續多次獲選新千歲機場與北海道霜淇淋評比冠軍！份量極具誠意且口感紮實超濃郁，現烤半熟起司塔也是絕品！
+                                    連續多次獲選評比冠軍！口感紮實超濃郁，現烤半熟起司塔也是絕品。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Kinotoya+cafe+Odori&query_place_id=ChIJkzLD35wpC18RTxpPxh8yDgU" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3.5 rounded-xl border border-amber-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-amber-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-amber-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-amber-950">大通公園店 (Cafe)</span>
-                                    </div>
-                                    <p class="text-xs text-amber-900 font-medium leading-snug">
-                                        札幌市中央區大通西3丁目7 北洋大通 Center 1F（近地下鐵大通站）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kinotoya+cafe+Odori&query_place_id=ChIJkzLD35wpC18RTxpPxh8yDgU" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3 rounded-xl border border-amber-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-amber-950 block">大通公園店 (Cafe)</span>
+                                    <p class="text-[11px] text-amber-900 font-medium truncate">北洋大通 Center 1F</p>
                                 </div>
-                                <span class="bg-amber-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1216,25 +1174,19 @@
                                         <input type="checkbox" data-food="f6" class="rounded text-stone-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">BARISTART COFFEE @ 狸小路</h3>
-                                <p class="text-xs text-stone-700 font-medium mb-3"><i class="fa-solid fa-mug-hot mr-1"></i> 北海道單一牧場鮮乳客製拿鐵</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">8. BARISTART COFFEE</h3>
+                                <p class="text-xs text-stone-700 font-medium mb-2.5"><i class="fa-solid fa-mug-hot mr-1"></i> 單一牧場鮮乳客製拿鐵</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    主打使用北海道特選單一牧場鮮乳（美瑛町、十勝、函館鮮乳）配對特選義式濃縮，調配出甘甜圓潤且奶香極濃的傳奇拿鐵！
+                                    使用美瑛町、十勝或函館鮮乳配對特選義式濃縮，調配出奶香極濃的拿鐵。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=BARISTART+COFFEE+Sapporo&query_place_id=ChIJL6ONVJspC18Rl9-QN-T7Qh4" target="_blank" rel="noopener noreferrer" class="bg-stone-50 hover:bg-stone-100/80 p-3.5 rounded-xl border border-stone-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-stone-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-stone-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-stone-950">狸小路店 (南3條)</span>
-                                    </div>
-                                    <p class="text-xs text-stone-900 font-medium leading-snug">
-                                        札幌市中央區南3條西5丁目14 三條美松大樓 1F（近狸小路 5 丁目）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=BARISTART+COFFEE+Sapporo&query_place_id=ChIJL6ONVJspC18Rl9-QN-T7Qh4" target="_blank" rel="noopener noreferrer" class="bg-stone-50 hover:bg-stone-100/80 p-3 rounded-xl border border-stone-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-stone-950 block">狸小路店 (南3條)</span>
+                                    <p class="text-[11px] text-stone-900 font-medium truncate">札幌市中央區南3條西5丁目</p>
                                 </div>
-                                <span class="bg-stone-800 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-black shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-stone-800 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-black shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
@@ -1248,25 +1200,331 @@
                                         <input type="checkbox" data-food="f7" class="rounded text-rose-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-xl font-bold text-slate-800 mb-1">六花亭 (Rokkatei 札幌本店)</h3>
-                                <p class="text-xs text-rose-700 font-medium mb-3"><i class="fa-solid fa-cookie-bite mr-1"></i> 經典丸成奶油餅乾 & 本店限定冰淇淋夾心餅</p>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">9. 六花亭 (札幌本店)</h3>
+                                <p class="text-xs text-rose-700 font-medium mb-2.5"><i class="fa-solid fa-cookie-bite mr-1"></i> 丸成奶油餅乾 & 限定冰淇淋餅</p>
                                 <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    除了帶回台的「丸成奶油餅乾 (Marusei Butter Sandwich)」外，札幌本店 2F 喫茶室更提供限定「賞味期限 3 小時」脆皮泡芙與「丸成冰淇淋夾心餅」，搭配高品質免費內用咖啡！
+                                    本店 2F 喫茶室提供限定「賞味期限 3 小時」脆皮泡芙與丸成冰淇淋夾心餅。
                                 </p>
                             </div>
-                            
-                            <a href="https://www.google.com/maps/search/?api=1&query=Rokkatei+Sapporo+Main+Store&query_place_id=ChIJN5rQlZ8pC18RHrY67ROV2mo" target="_blank" rel="noopener noreferrer" class="bg-rose-50 hover:bg-rose-100/80 p-3.5 rounded-xl border border-rose-200 flex items-center justify-between group transition">
-                                <div class="space-y-1 pr-2">
-                                    <div class="text-xs font-bold text-rose-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-map-location-dot text-rose-600 text-sm"></i>
-                                        <span class="text-sm font-extrabold text-rose-950">札幌本店（近 JR 札幌站南口）</span>
-                                    </div>
-                                    <p class="text-xs text-rose-900 font-medium leading-snug">
-                                        札幌市中央區北4條西6丁目3-3（從 JR 札幌站南口步行約 5 分鐘）
-                                    </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Rokkatei+Sapporo+Main+Store&query_place_id=ChIJN5rQlZ8pC18RHrY67ROV2mo" target="_blank" rel="noopener noreferrer" class="bg-rose-50 hover:bg-rose-100/80 p-3 rounded-xl border border-rose-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-rose-950 block">札幌本店 (JR 站南口)</span>
+                                    <p class="text-[11px] text-rose-900 font-medium truncate">札幌市中央區北4條西6丁目</p>
                                 </div>
-                                <span class="bg-rose-600 text-white text-xs font-bold px-3 py-2 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-700 shadow-xs">
-                                    開啟地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                <span class="bg-rose-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-rose-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 10: 湯咖哩 GARAKU -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-amber-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-amber-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">超人氣排隊名店</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-amber-700 font-semibold">
+                                        <input type="checkbox" data-food="f10" class="rounded text-amber-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">10. 湯咖哩 GARAKU</h3>
+                                <p class="text-xs text-amber-700 font-medium mb-2.5"><i class="fa-solid fa-bowl-food mr-1"></i> 和風出汁秘傳湯咖哩</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    以天然和風鰹魚高湯搭配 21 種香料，秘製炙燒雞腿湯咖哩美味風靡全日本！
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Soup+Curry+GARAKU+Sapporo&query_place_id=ChIJQ21rhoMpC18RmzhfndITzug" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3 rounded-xl border border-amber-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-amber-950 block">札幌本店 (狸小路)</span>
+                                    <p class="text-[11px] text-amber-900 font-medium truncate">札幌市中央區南3條東2丁目 B1F</p>
+                                </div>
+                                <span class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 11: 十勝豚丼 いっぴん -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-orange-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-orange-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">帶廣豚丼代表</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-orange-700 font-semibold">
+                                        <input type="checkbox" data-food="f11" class="rounded text-orange-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">11. 十勝豚丼 いっぴん</h3>
+                                <p class="text-xs text-orange-700 font-medium mb-2.5"><i class="fa-solid fa-utensils mr-1"></i> 炭火現烤厚切豚丼</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    嚴選北海道產豬肉，搭配十勝秘傳醬汁於備長炭上反覆翻烤，香氣逼人。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Tokachi+Butadon+Ippin+Sapporo+Station&query_place_id=ChIJq6qq2XQpC18RrciRxwugu1o" target="_blank" rel="noopener noreferrer" class="bg-orange-50 hover:bg-orange-100/80 p-3 rounded-xl border border-orange-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-orange-950 block">札幌車站店 (Stellar Place)</span>
+                                    <p class="text-[11px] text-orange-900 font-medium truncate">STELLAR PLACE 6F</p>
+                                </div>
+                                <span class="bg-orange-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-orange-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 12: 札幌味噌拉麵 すみれ -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-red-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">味噌拉麵殿堂</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-red-700 font-semibold">
+                                        <input type="checkbox" data-food="f12" class="rounded text-red-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">12. 札幌味噌拉麵 すみれ</h3>
+                                <p class="text-xs text-red-700 font-medium mb-2.5"><i class="fa-solid fa-fire-flame-curved mr-1"></i> 濃厚豬油保溫傳統拉麵</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    札幌味噌拉麵最具代表性的祖師級品牌！湯頭上有一層防冷的豬油膜，極其濃郁。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sumire+Miso+Ramen+Susukino+Sapporo&query_place_id=ChIJ7eJAZIQpC18Rzy6RhCEmr4c" target="_blank" rel="noopener noreferrer" class="bg-red-50 hover:bg-red-100/80 p-3 rounded-xl border border-red-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-red-950 block">薄野店 (Susukino)</span>
+                                    <p class="text-[11px] text-red-900 font-medium truncate">札幌市中央區南3條西3丁目 2F</p>
+                                </div>
+                                <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-red-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 13: 迴轉壽司 Toriton -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-sky-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-sky-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">在地人首選壽司</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-sky-700 font-semibold">
+                                        <input type="checkbox" data-food="f13" class="rounded text-sky-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">13. 迴轉壽司 Toriton (トリトン)</h3>
+                                <p class="text-xs text-sky-700 font-medium mb-2.5"><i class="fa-solid fa-water mr-1"></i> 超厚切海鮮 & 在地強推</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    北海道在地人一致推崇的迴轉壽司！魚料大塊又極致新鮮，份量極為誠意。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kaiten+Sushi+Toriton+Sapporo&query_place_id=ChIJvxpbaHMpC18RRAn5eez7eRM" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-sky-950 block">北8條店 / 圓山店</span>
+                                    <p class="text-[11px] text-sky-900 font-medium truncate">札幌市東區北8條東5丁目</p>
+                                </div>
+                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 14: LeTAO 小樽洋菓子舖 本店 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-indigo-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-indigo-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">小樽雙層起司名店</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-indigo-700 font-semibold">
+                                        <input type="checkbox" data-food="f14" class="rounded text-indigo-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">14. LeTAO 小樽洋菓子舖</h3>
+                                <p class="text-xs text-indigo-700 font-medium mb-2.5"><i class="fa-solid fa-cake-candles mr-1"></i> 雙層乳酪蛋糕 (Double Fromage)</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    入口即化的雙層起司蛋糕傳奇！本店 2 樓喫茶室可品嘗現做限定款蛋糕。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=LeTAO+Main+Store+Otaru&query_place_id=ChIJA__BjVrgCl8R_mYZYGfWn3I" target="_blank" rel="noopener noreferrer" class="bg-indigo-50 hover:bg-indigo-100/80 p-3 rounded-xl border border-indigo-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-indigo-950 block">小樽本店 (堺町通)</span>
+                                    <p class="text-[11px] text-indigo-900 font-medium truncate">小樽市堺町7-16</p>
+                                </div>
+                                <span class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-indigo-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 15: 北菓樓 小樽本館 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-amber-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-amber-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">爆漿泡芙代表</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-amber-700 font-semibold">
+                                        <input type="checkbox" data-food="f15" class="rounded text-amber-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">15. 北菓樓 (小樽本館)</h3>
+                                <p class="text-xs text-amber-700 font-medium mb-2.5"><i class="fa-solid fa-cookie mr-1"></i> 夢不思議泡芙 & 妖精之森</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    必吃「夢不思議」脆皮爆漿泡芙，以及開拓米果與妖精之森年輪蛋糕。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kitakaro+Otaru+Main+Store&query_place_id=ChIJb54BmlrgCl8RSSKykITg9MM" target="_blank" rel="noopener noreferrer" class="bg-amber-50 hover:bg-amber-100/80 p-3 rounded-xl border border-amber-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-amber-950 block">小樽本館 (堺町通)</span>
+                                    <p class="text-[11px] text-amber-900 font-medium truncate">小樽市堺町7-22</p>
+                                </div>
+                                <span class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-amber-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 16: 小樽政壽司 本店 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-cyan-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-cyan-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">將太的壽司原型</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-cyan-700 font-semibold">
+                                        <input type="checkbox" data-food="f16" class="rounded text-cyan-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">16. 小樽政壽司 (本店)</h3>
+                                <p class="text-xs text-cyan-700 font-medium mb-2.5"><i class="fa-solid fa-shrimp mr-1"></i> 百年壽司店傳奇工藝</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    著名漫畫《將太的壽司》取景地，品嚐小樽港頂級海膽與花枝刺身。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Otaru+Masazushi+Main+Store&query_place_id=ChIJuUOVZVHgCl8RCUm0xBUU6Cs" target="_blank" rel="noopener noreferrer" class="bg-cyan-50 hover:bg-cyan-100/80 p-3 rounded-xl border border-cyan-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-cyan-950 block">小樽政壽司 本店</span>
+                                    <p class="text-[11px] text-cyan-900 font-medium truncate">小樽市花園1丁目1-1</p>
+                                </div>
+                                <span class="bg-cyan-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-cyan-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 17: 世壱屋 余市店 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-yellow-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-yellow-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">余市海膽名店</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-yellow-700 font-semibold">
+                                        <input type="checkbox" data-food="f17" class="rounded text-yellow-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">17. 世壱屋 (余市店)</h3>
+                                <p class="text-xs text-yellow-700 font-medium mb-2.5"><i class="fa-solid fa-crown mr-1"></i> 熟成炙燒海膽丼</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    余市極高評價海膽專賣店！半熟炙燒海膽與極鮮海鮮丼令人難忘。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Yoichi+Yoichiya+Uni+Don&query_place_id=ChIJU75cRI3lCl8RF1_mrgdivd4" target="_blank" rel="noopener noreferrer" class="bg-yellow-50 hover:bg-yellow-100/80 p-3 rounded-xl border border-yellow-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-yellow-950 block">世壱屋 余市店</span>
+                                    <p class="text-[11px] text-yellow-900 font-medium truncate">余市郡余市町大川町7-29-4</p>
+                                </div>
+                                <span class="bg-yellow-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-yellow-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 18: 柿崎商店 海鮮工房 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-teal-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-teal-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">平價產地直銷</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-teal-700 font-semibold">
+                                        <input type="checkbox" data-food="f18" class="rounded text-teal-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">18. 柿崎商店 海鮮工房</h3>
+                                <p class="text-xs text-teal-700 font-medium mb-2.5"><i class="fa-solid fa-box-open mr-1"></i> CP 值爆表平價海鮮</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    海鮮批發商直營！用極親民價格品嚐爆滿鮭魚卵丼與烤花魚。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kakizaki+Shoten+Yoichi&query_place_id=ChIJT-2eI6PlCl8RO0u_q-UEAno" target="_blank" rel="noopener noreferrer" class="bg-teal-50 hover:bg-teal-100/80 p-3 rounded-xl border border-teal-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-teal-950 block">柿崎商店 海鮮工房</span>
+                                    <p class="text-[11px] text-teal-900 font-medium truncate">余市町黑川町7-25 2F</p>
+                                </div>
+                                <span class="bg-teal-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-teal-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 19: 旭川拉麵 梅光軒 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-purple-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-purple-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">旭川醬油拉麵</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-purple-700 font-semibold">
+                                        <input type="checkbox" data-food="f19" class="rounded text-purple-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">19. 旭川拉麵 梅光軒</h3>
+                                <p class="text-xs text-purple-700 font-medium mb-2.5"><i class="fa-solid fa-bowl-rice mr-1"></i> 雙湯頭（豚骨+魚介）</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    旭川拉麵得獎代表！獨特豚骨與海鮮魚介雙重高湯，搭配粗切筍乾。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Baikoken+Asahikawa+Main+Store&query_place_id=ChIJ__-DjhHmDF8Rcu01ICSK-hc" target="_blank" rel="noopener noreferrer" class="bg-purple-50 hover:bg-purple-100/80 p-3 rounded-xl border border-purple-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-purple-950 block">旭川本店 (近旭川站)</span>
+                                    <p class="text-[11px] text-purple-900 font-medium truncate">旭川市2條通8丁目 B1F</p>
+                                </div>
+                                <span class="bg-purple-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-purple-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 20: 雪印 PARLOR 札幌本店 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-sky-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-sky-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">昭和天皇親賞</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-sky-700 font-semibold">
+                                        <input type="checkbox" data-food="f20" class="rounded text-sky-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">20. 雪印 PARLOR 札幌本店</h3>
+                                <p class="text-xs text-sky-700 font-medium mb-2.5"><i class="fa-solid fa-cloud mr-1"></i> Royal Special 皇室冰淇淋</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    乳脂高達 16% 的皇室級冰淇淋！歷史悠久的北海道乳業代表性名店。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Snow+Brand+Parlor+Sapporo+Main+Store&query_place_id=ChIJ_ya0-J0pC18RBdiF2CeGBLs" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-sky-950 block">札幌本店</span>
+                                    <p class="text-[11px] text-sky-900 font-medium truncate">札幌市中央區北2條西3丁目</p>
+                                </div>
+                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Food 21: 夜パフェ専門店 Parfaiteria PaL -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-pink-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-pink-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">薄野夜聖代始祖</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-pink-700 font-semibold">
+                                        <input type="checkbox" data-food="f21" class="rounded text-pink-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">21. 夜パフェ専門店 PaL</h3>
+                                <p class="text-xs text-pink-700 font-medium mb-2.5"><i class="fa-solid fa-moon mr-1"></i> 薄野夜間飲酒靈魂結尾</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                    札幌獨特「締めパフェ」文化！精心調配精緻視覺與微醺層次的深夜聖代。
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Parfaiteria+PaL+Susukino+Sapporo&query_place_id=ChIJ02KmG4QpC18RGdiqVSNFRWY" target="_blank" rel="noopener noreferrer" class="bg-pink-50 hover:bg-pink-100/80 p-3 rounded-xl border border-pink-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-pink-950 block">Parfaiteria PaL (薄野)</span>
+                                    <p class="text-[11px] text-pink-900 font-medium truncate">札幌市中央區南4條西2丁目 6F</p>
+                                </div>
+                                <span class="bg-pink-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-pink-700 shadow-xs">
+                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                                 </span>
                             </a>
                         </div>
