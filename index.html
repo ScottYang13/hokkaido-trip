@@ -349,7 +349,7 @@
                     <i class="fa-solid fa-gamepad text-[10px]"></i> 動漫挖寶
                 </button>
                 <button onclick="switchTab('food', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-amber-700 hover:bg-amber-50 shadow-xs flex items-center justify-center gap-1" data-target="food">
-                    <i class="fa-solid fa-utensils text-[10px]"></i> 必吃美食 (21處)
+                    <i class="fa-solid fa-utensils text-[10px]"></i> 必吃美食 (22處)
                 </button>
                 <button onclick="switchTab('shopping', event)" class="tab-btn py-2.5 px-2 rounded-xl font-bold text-xs transition-all text-center bg-white text-emerald-700 hover:bg-emerald-50 shadow-xs flex items-center justify-center gap-1" data-target="shopping">
                     <i class="fa-solid fa-bag-shopping text-[10px]"></i> 購物指南
@@ -624,9 +624,9 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
                         <div>
                             <span class="text-xs font-bold uppercase tracking-wider text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100">2026/11/24 (二)・Day 5</span>
-                            <h2 class="text-2xl font-bold text-slate-800 mt-1">北海道神宮、圓山公園 ➔ 白色戀人公園甜點巡禮</h2>
+                            <h2 class="text-2xl font-bold text-slate-800 mt-1">北海道神宮、圓山公園 ➔ Toriton 圓山店 ➔ 白色戀人公園</h2>
                         </div>
-                        <div class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-regular fa-clock text-rose-600"></i> 圓山半日散策＋宮之澤午後行程</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-regular fa-clock text-rose-600"></i> 圓山半日散策＋壽司午餐＋宮之澤午後行程</div>
                     </div>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="md:col-span-2 space-y-4">
@@ -646,15 +646,23 @@
                                 </label>
                                 <label class="flex items-start gap-3 p-3.5 bg-white rounded-xl border border-slate-200/80 shadow-xs cursor-pointer hover:bg-slate-50 transition">
                                     <input type="checkbox" data-id="d5-4" class="mt-1 h-4 w-4 rounded text-rose-600 focus:ring-rose-500 task-checkbox">
-                                    <div class="text-sm"><span class="font-semibold text-slate-800">4. 午餐（圓山／宮之澤周邊）</span><p class="text-slate-500 text-xs mt-0.5">建議在圓山一帶用餐後，搭乘地鐵東西線前往宮之澤。</p></div>
+                                    <div class="text-sm"><span class="font-semibold text-slate-800">4. Toriton 圓山店現場取號候位</span><p class="text-slate-500 text-xs mt-0.5">抵達後先取號確認等候時間；若需等候，可到附近 Maruyama Class 逛街，留意叫號再返回。</p></div>
                                 </label>
                                 <label class="flex items-start gap-3 p-3.5 bg-white rounded-xl border border-slate-200/80 shadow-xs cursor-pointer hover:bg-slate-50 transition">
                                     <input type="checkbox" data-id="d5-5" class="mt-1 h-4 w-4 rounded text-rose-600 focus:ring-rose-500 task-checkbox">
-                                    <div class="text-sm"><span class="font-semibold text-slate-800">5. 白色戀人公園</span><p class="text-slate-500 text-xs mt-0.5">參觀巧克力與餅乾主題園區、欣賞歐風建築，安排甜點、拍照與伴手禮採買。</p></div>
+                                    <div class="text-sm"><span class="font-semibold text-slate-800">5. Maruyama Class 圓山購物商場（候位逛街）</span><p class="text-slate-500 text-xs mt-0.5">利用 Toriton 等候時間逛商場、書店與生活選物；注意候位進度，預留時間返回餐廳。</p></div>
                                 </label>
                                 <label class="flex items-start gap-3 p-3.5 bg-white rounded-xl border border-slate-200/80 shadow-xs cursor-pointer hover:bg-slate-50 transition">
                                     <input type="checkbox" data-id="d5-6" class="mt-1 h-4 w-4 rounded text-rose-600 focus:ring-rose-500 task-checkbox">
-                                    <div class="text-sm"><span class="font-semibold text-slate-800">6. 傍晚返回札幌市區</span><p class="text-slate-500 text-xs mt-0.5">搭乘地鐵返回市中心，晚餐與晚間活動自由安排。</p></div>
+                                    <div class="text-sm"><span class="font-semibold text-slate-800">6. Toriton 圓山店午餐</span><p class="text-slate-500 text-xs mt-0.5">享用北海道人氣迴轉壽司，推薦依當日漁獲挑選干貝、鮭魚與季節限定海鮮。</p></div>
+                                </label>
+                                <label class="flex items-start gap-3 p-3.5 bg-white rounded-xl border border-slate-200/80 shadow-xs cursor-pointer hover:bg-slate-50 transition">
+                                    <input type="checkbox" data-id="d5-7" class="mt-1 h-4 w-4 rounded text-rose-600 focus:ring-rose-500 task-checkbox">
+                                    <div class="text-sm"><span class="font-semibold text-slate-800">7. 白色戀人公園</span><p class="text-slate-500 text-xs mt-0.5">參觀巧克力與餅乾主題園區、欣賞歐風建築，安排甜點、拍照與伴手禮採買。</p></div>
+                                </label>
+                                <label class="flex items-start gap-3 p-3.5 bg-white rounded-xl border border-slate-200/80 shadow-xs cursor-pointer hover:bg-slate-50 transition">
+                                    <input type="checkbox" data-id="d5-8" class="mt-1 h-4 w-4 rounded text-rose-600 focus:ring-rose-500 task-checkbox">
+                                    <div class="text-sm"><span class="font-semibold text-slate-800">8. 傍晚返回札幌市區</span><p class="text-slate-500 text-xs mt-0.5">搭乘地鐵返回市中心，晚餐與晚間活動自由安排。</p></div>
                                 </label>
                             </div>
                         </div>
@@ -662,11 +670,12 @@
                             <div><h4 class="font-bold text-rose-900 text-sm mb-2 flex items-center gap-1.5"><i class="fa-solid fa-cookie-bite"></i> 交通與參觀提醒</h4>
                                 <ul class="text-xs space-y-2 text-slate-600">
                                     <li><strong class="text-slate-800">上午：</strong>北海道神宮、圓山公園與六花亭神宮茶屋彼此相鄰，可步行串連。</li>
-                                    <li><strong class="text-slate-800">下午：</strong>白色戀人公園位於宮之澤，建議搭乘地鐵東西線前往，預留約 1.5～2.5 小時。</li>
+                                    <li><strong class="text-slate-800">午餐候位：</strong>Toriton 圓山店先取號；Maruyama Class 可作為等候時的逛街休息點，請留意叫號。</li>
+                                    <li><strong class="text-slate-800">下午：</strong>用餐後搭乘地鐵東西線前往宮之澤，白色戀人公園建議預留約 1.5～2.5 小時。</li>
                                     <li><strong class="text-slate-800">營業提醒：</strong>白色戀人公園部分付費設施與活動依當日營運安排為準。</li>
                                 </ul>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-rose-200/60 text-[11px] text-rose-800 font-medium"><i class="fa-solid fa-lightbulb text-rose-600 mr-1"></i> 上午神宮森林散策，下午享受北海道甜點！</div>
+                            <div class="mt-4 pt-3 border-t border-rose-200/60 text-[11px] text-rose-800 font-medium"><i class="fa-solid fa-lightbulb text-rose-600 mr-1"></i> 神宮散策後吃壽司，候位時逛商場，再前往白色戀人公園！</div>
                         </div>
                     </div>
                 </div>
@@ -961,7 +970,7 @@
                 <div class="glass-card rounded-2xl p-6 shadow-sm border border-amber-200/80 bg-gradient-to-b from-amber-50/20 via-white to-white">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">必吃美食完整地圖 (21 處名店)</span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">必吃美食完整地圖 (22 處名店)</span>
                             <h2 class="text-2xl font-bold text-slate-800 mt-1">札幌・小樽・余市・旭川極致美饌指南</h2>
                         </div>
                         <div class="text-xs text-slate-500">
@@ -1282,7 +1291,7 @@
                             </a>
                         </div>
 
-                        <!-- Food 13: 迴轉壽司 Toriton -->
+                        <!-- Food 13: Toriton 北8條光星店 -->
                         <div class="food-card-bg rounded-2xl p-5 border border-sky-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
                             <div>
                                 <div class="flex justify-between items-start mb-3">
@@ -1291,20 +1300,38 @@
                                         <input type="checkbox" data-food="f13" class="rounded text-sky-600 food-checkbox"> 已征服
                                     </label>
                                 </div>
-                                <h3 class="text-lg font-bold text-slate-800 mb-1">13. 迴轉壽司 Toriton (トリトン)</h3>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">13. Toriton 北8條光星店</h3>
                                 <p class="text-xs text-sky-700 font-medium mb-2.5"><i class="fa-solid fa-water mr-1"></i> 超厚切海鮮 & 在地強推</p>
-                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    北海道在地人一致推崇的迴轉壽司！魚料大塊又極致新鮮，份量極為誠意。
-                                </p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">北海道在地人推薦的迴轉壽司，魚料大塊新鮮，適合安排 Day 2 晚餐。</p>
                             </div>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Kaiten+Sushi+Toriton+Sapporo&query_place_id=ChIJvxpbaHMpC18RRAn5eez7eRM" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
+                            <a href="https://www.google.com/maps/search/?api=1&query=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E3%81%97%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3+%E5%8C%978%E6%9D%A1%E5%85%89%E6%98%9F%E5%BA%97" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
                                 <div class="space-y-0.5 pr-2">
-                                    <span class="text-xs font-bold text-sky-950 block">北8條店 / 圓山店</span>
+                                    <span class="text-xs font-bold text-sky-950 block">北8條光星店</span>
                                     <p class="text-[11px] text-sky-900 font-medium truncate">札幌市東區北8條東5丁目</p>
                                 </div>
-                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">
-                                    地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                                </span>
+                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
+                            </a>
+                        </div>
+
+                        <!-- Food 22: Toriton 圓山店 -->
+                        <div class="food-card-bg rounded-2xl p-5 border border-sky-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="bg-sky-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">圓山午餐候選</span>
+                                    <label class="cursor-pointer flex items-center gap-1 text-xs text-sky-700 font-semibold">
+                                        <input type="checkbox" data-food="f22" class="rounded text-sky-600 food-checkbox"> 已征服
+                                    </label>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-1">22. Toriton 圓山店</h3>
+                                <p class="text-xs text-sky-700 font-medium mb-2.5"><i class="fa-solid fa-fish mr-1"></i> 北海道新鮮海味</p>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-4">Day 5 北海道神宮、圓山公園一帶的壽司選擇，可先取號，再到附近商場逛街等候。</p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E3%81%97%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3+%E5%86%86%E5%B1%B1%E5%BA%97" target="_blank" rel="noopener noreferrer" class="bg-sky-50 hover:bg-sky-100/80 p-3 rounded-xl border border-sky-200 flex items-center justify-between group transition">
+                                <div class="space-y-0.5 pr-2">
+                                    <span class="text-xs font-bold text-sky-950 block">圓山店</span>
+                                    <p class="text-[11px] text-sky-900 font-medium truncate">札幌市中央區圓山一帶</p>
+                                </div>
+                                <span class="bg-sky-600 text-white text-xs font-bold px-2.5 py-1.5 rounded-lg shrink-0 flex items-center gap-1 group-hover:bg-sky-700 shadow-xs">地圖 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
                             </a>
                         </div>
 
